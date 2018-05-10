@@ -52,7 +52,6 @@ def handler_event(event):
     else:
         fn = path
     for change in handler.get_change(fn):
-        print(change)
         try:
             post_event(change)
         except Exception as err:
